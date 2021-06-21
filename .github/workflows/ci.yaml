@@ -24,7 +24,6 @@ jobs:
         run: npm run build
       - name: Deploy to Staging
         run: npx surge --project ./build --domain https://absorbed-breath.surge.sh/
-        env: 
+        env:
           SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
           SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
-
