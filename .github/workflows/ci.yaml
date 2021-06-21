@@ -28,7 +28,7 @@ jobs:
           CI: true
       - name: Upload Code-coverage
         uses: actions/upload-artifact@v2
-        with: 
+        with:
           path: coverage
       - name: Build Project
         if: github.event_name == 'push'
@@ -36,7 +36,7 @@ jobs:
       - name: Upload Build
         if: github.event_name == 'push'
         uses: actions/upload-artifact@v2
-        with: 
+        with:
           path: build
       - name: Deploy to Staging
         if: github.event_name == 'push'
